@@ -58,3 +58,13 @@ model AiCost {
 
   user User @relation(fields: [userId], references: [id])
 }
+
+model AiRequest {
+  id          String   @id @default(cuid())
+  userId      String
+  prompt      String
+  response    String
+  tokensUsed  Int
+  createdAt   DateTime @default(now())
+}
+

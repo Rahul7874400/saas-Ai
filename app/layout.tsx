@@ -1,13 +1,14 @@
-// app/layout.tsx
-import { ClerkProvider } from '@clerk/nextjs';
-import './globals.css';
-import { ReactNode } from 'react';
+import "./globals.css";
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body>
-        <ClerkProvider>{children}</ClerkProvider>
+      <body className="bg-gray-100 text-gray-900">
+        {children}
       </body>
     </html>
   );
